@@ -5,7 +5,7 @@ import Navbar from "./Navbar";
 
 const useStyles = makeStyles (theme=>({
     mainContainer: {
-        background: "#96CDD4"
+        background: "#233"
     },
     timeLine: {
         position: "relative",
@@ -15,7 +15,7 @@ const useStyles = makeStyles (theme=>({
             content:"''",
             position: "absolute",
             height: "100%",
-            border: "1px solid black",
+            border: "1px solid tan",
             right: "40px",
             top: 0
         },
@@ -34,7 +34,7 @@ const useStyles = makeStyles (theme=>({
     },
     timeLineItem: {
         padding: "1rem",
-        borderBottom: "2px solid black",
+        borderBottom: "2px solid tan",
         position: "relative",
         margin: "1rem 3rem 1rem 1rem",   
         clear: "both",
@@ -48,7 +48,7 @@ const useStyles = makeStyles (theme=>({
             right: "-0.625rem",
             top: "calc(50% - 5px)",
             borderStyle: "solid",
-            borderColor: "tomato tomato transparant transparant",
+            borderColor: "tomato tomato transparent transparent",
             borderWidth: "0.625rem",
             transform: "rotate(45deg)"
             
@@ -77,7 +77,7 @@ const useStyles = makeStyles (theme=>({
         background: "tomato",
         color: "white",
         lineHeight: 1,
-        padding: "0.5rem 0 1rem",
+        padding: "0.5rem 0 0.5rem",
         "&:before" : {
             display: "none"
         },
@@ -92,7 +92,18 @@ const useStyles = makeStyles (theme=>({
                 display: "none"
             }
         }
-    }
+        },
+        heading: {
+            color: "tomato",
+        
+            padding: "3rem 0", 
+            textTransform: "uppercase"
+        },
+        subHeading: {
+            color: "white",
+            padding: '0',
+            textTransform: "uppercase"
+        }
 }));
 
 const Resume = () => {
@@ -101,7 +112,7 @@ const Resume = () => {
         <>
        <Navbar />
       <Box component="header" className={classes.mainContainer}>
-          <Typography variant="h4" align="center">
+          <Typography variant="h4" align="center" className={classes.heading}>
             Work Experience
           </Typography>
           <Box component="div" className={classes.timeLine}>
@@ -109,8 +120,94 @@ const Resume = () => {
               variant="h2" 
               className={`${classes.timeLineYear} ${classes.timeLineItem}`}
               >
-                2020
+                Nineties
             </Typography>
+            <Box component="div" className={classes.timeLineItem}>
+                <Typography variant="h5" 
+                aligh="center" 
+                className={classes.subHeading}>
+                    The Beginnings
+                </Typography>
+                <Typography variant="body1" 
+                aligh="center"
+                style={{color: "tomato"}}>
+                    Computer Games 
+                </Typography>
+                <Typography variant="subtitle1" 
+                aligh="center"
+                style={{color: "tan"}}>
+                This is the subtitle area...........
+                </Typography>
+            </Box>
+                    <Typography
+                        variant="h2"
+                        className={`${classes.timeLineYear} ${classes.timeLineItem}`}
+                    >
+                        2000s
+            </Typography>
+                    <Box component="div" className={classes.timeLineItem}>
+                        <Typography variant="h5"
+                            aligh="center"
+                            className={classes.subHeading}>
+                            Dial Up
+                </Typography>
+                        <Typography variant="body1"
+                            aligh="center"
+                            style={{ color: "tomato" }}>
+                            Xanga. Myspace. AOL
+                </Typography>
+                        <Typography variant="subtitle1"
+                            aligh="center"
+                            style={{ color: "tan" }}>
+                            This is the subtitle area...........
+                </Typography>
+                    </Box>
+                    <Typography
+                        variant="h2"
+                        className={`${classes.timeLineYear} ${classes.timeLineItem}`}
+                    >
+                        2017-2019
+            </Typography>
+                    <Box component="div" className={classes.timeLineItem}>
+                        <Typography variant="h5"
+                            aligh="center"
+                            className={classes.subHeading}>
+                            The Self Taught Beginnings 
+                </Typography>
+                        <Typography variant="body1"
+                            aligh="center"
+                            style={{ color: "tomato" }}>
+                            General Assembly 
+                </Typography>
+                        <Typography variant="subtitle1"
+                            aligh="center"
+                            style={{ color: "tan" }}>
+                            Road To Full Stack
+                </Typography>
+                    </Box>
+                    <Typography
+                        variant="h2"
+                        className={`${classes.timeLineYear} ${classes.timeLineItem}`}
+                    >
+                        2020s
+            </Typography>
+                    <Box component="div" className={classes.timeLineItem}>
+                        <Typography variant="h5"
+                            aligh="center"
+                            className={classes.subHeading}>
+                            Marketing
+                </Typography>
+                        <Typography variant="body1"
+                            aligh="center"
+                            style={{ color: "tomato" }}>
+                            Building On the Side
+                </Typography>
+                        <Typography variant="subtitle1"
+                            aligh="center"
+                            style={{ color: "tan" }}>
+                            The Future
+                </Typography>
+                    </Box>
           </Box>
       </Box>
        </>
