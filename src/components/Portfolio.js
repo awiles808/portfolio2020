@@ -1,5 +1,7 @@
 import React from 'react';
-import {makeStyles} from "@material-ui/core/styles"
+import {makeStyles} from "@material-ui/core/styles";
+
+
 import {
     Box,
     Grid,
@@ -8,7 +10,7 @@ import {
     CardActions,
     CardContent,
     CardMedia,
-    Button,
+    Link,
     Typography
 } from "@material-ui/core"
 import Navbar from './Navbar';
@@ -20,14 +22,18 @@ import project4 from "./images/pong.png"
 
 const useStyles = makeStyles({
     mainContainer: {
-        background: "#233", 
+        background: "#96CDD4", 
         height: "100%"
     },
     cardContainer: {
         maxWidth: 400,
         margin: "3rem 5rem auto",
         margin: "5rem auto"
-    }
+    },
+    // Box: {
+    //     boxSizing: 'border-box',
+    //     minWidth: 0,
+    // }
 
 });
 
@@ -48,6 +54,7 @@ const Portfolio = () => {
                             height="240"
                             width="340"
                             image={project1}
+                            
                             />
                             <CardContent>
                                 <Typography gutterBottom variant="h5">
@@ -59,12 +66,14 @@ const Portfolio = () => {
                                 </CardContent>
                             </CardActionArea>
                                 <CardActions>
-                                    <Button size="small" color="primary">
-                                        Share
-                                    </Button>
-                                    <Button size="small" color="primary">
-                                        Live Demo
-                                    </Button>
+                            
+                            <Link href="https://fathomless-atoll-71863.herokuapp.com/" target="_blank" >
+                                View Powder Planner
+                                </Link>
+                                    
+                                    <Link href="https://github.com/awiles808/PowderPlanner" target="_blank"size="small" color="primary">
+                                        Git Hub Repo
+                                    </Link>
                                 </CardActions>
                     </Card>
                     </Grid>
@@ -74,7 +83,7 @@ const Portfolio = () => {
                             <CardActionArea>
                                 <CardMedia
                                     component="img"
-                                    alt="Project 1"
+                                    alt="Project 2"
                                     height="240"
                                     width="340"
                                     image={project2}
@@ -89,12 +98,12 @@ const Portfolio = () => {
                                 </CardContent>
                         </CardActionArea>
                                 <CardActions>
-                            <Button size="small" color="primary">
-                                        Share
-                                    </Button>
-                                    <Button size="small" color="primary">
-                                        Live Demo
-                                    </Button>
+                            <Link href="http://503developmentcompany.com/" target= "_blank" size="small" color="primary">
+                                        503 Development CO
+                                    </Link>
+                                    {/* <Link href="https://github.com/awiles808/WaterHeaterSchedule" target="_blank" size="small" color="primary">
+                                        Git Hub Repo
+                                    </Link> */}
                                 </CardActions>                            
                         </Card>
                 </Grid>
@@ -104,14 +113,14 @@ const Portfolio = () => {
                         <CardActionArea>
                             <CardMedia
                                 component="img"
-                                alt="Project 1"
+                                alt="Project 3"
                                 height="240"
                                 width="340"
                                 image={project3}
                             />
                             <CardContent>
                                 <Typography gutterBottom variant="h5">
-                                    Plubmber's Log
+                                    Plumbers's Log
                                 </Typography>
                                 <Typography variant="body2" color="textSecondary" component="p">
                                     Lorem30
@@ -119,12 +128,12 @@ const Portfolio = () => {
                             </CardContent>
                         </CardActionArea>
                             <CardActions>
-                                <Button size="small" color="primary">
-                                    Shre
-                                    </Button>
-                                <Button size="small" color="primary">
-                                    Live Demo
-                                    </Button>
+                            <Link href="https://water-heater-schedule.firebaseapp.com/" target="_blank" size="small" color="primary">
+                                    Plumber's Log
+                                    </Link>
+                            <Link href="https://github.com/awiles808/WaterHeaterSchedule" target="_blank" size="small" color="primary">
+                                    Git Hub Repo
+                                    </Link>
                             </CardActions>                       
                     </Card>
                 </Grid>
@@ -134,7 +143,7 @@ const Portfolio = () => {
                         <CardActionArea>
                             <CardMedia
                                 component="img"
-                                alt="Project 1"
+                                alt="Project 4"
                                 height="240"
                                 width="340"
                                 image={project4}
@@ -144,17 +153,18 @@ const Portfolio = () => {
                                     Pong
                                 </Typography>
                                 <Typography variant="body2" color="textSecondary" component="p">
-                                    Lorem30
+Can You Beat A Computer In Pong? Take It Back To One Of The Original Games, And See How Your Skills Match Up Against A Computer!
+
                                 </Typography>
                             </CardContent>
                         </CardActionArea>
                             <CardActions>
-                                <Button size="small" color="primary">
-                                    Shre
-                                    </Button>
-                                <Button size="small" color="primary">
-                                    Live Demo
-                                    </Button>
+                                {/* <Link href="" size="small" color="primary">
+                                    Share
+                                    </Link>
+                                <Link size="small" color="primary">
+                                    Git Hub Repo
+                                    </Link> */}
                             </CardActions>                       
                     </Card>
                 </Grid>

@@ -5,7 +5,8 @@ import Navbar from "./Navbar";
 
 const useStyles = makeStyles (theme=>({
     mainContainer: {
-        background: "#233"
+        background: "#96CDD4",
+        borderRadius: 16
     },
     timeLine: {
         position: "relative",
@@ -15,9 +16,10 @@ const useStyles = makeStyles (theme=>({
             content:"''",
             position: "absolute",
             height: "100%",
-            border: "1px solid tan",
+            border: "1px solid black",
             right: "40px",
             top: 0
+          
         },
         "&:after": {
             content: "''",
@@ -34,7 +36,7 @@ const useStyles = makeStyles (theme=>({
     },
     timeLineItem: {
         padding: "1rem",
-        borderBottom: "2px solid tan",
+        borderBottom: "2px solid black",
         position: "relative",
         margin: "1rem 3rem 1rem 1rem",   
         clear: "both",
@@ -59,7 +61,7 @@ const useStyles = makeStyles (theme=>({
             "&:nth-of-type(2n)": {
                 float: "right",
                 margin: "1rem",
-                borderColor: "tan"
+                borderColor: "black"
             },
             "&:nth-of-type(2n):before": {
                 right: "auto",
@@ -78,6 +80,7 @@ const useStyles = makeStyles (theme=>({
         color: "white",
         lineHeight: 1,
         padding: "0.5rem 0 0.5rem",
+        borderRadius: 16,
         "&:before" : {
             display: "none"
         },
@@ -94,16 +97,18 @@ const useStyles = makeStyles (theme=>({
         }
         },
         heading: {
-            color: "tomato",
+            color: "black",
         
             padding: "3rem 0", 
             textTransform: "uppercase"
         },
         subHeading: {
-            color: "white",
+            color: "black",
             padding: '0',
             textTransform: "uppercase"
         }
+     
+    
 }));
 
 const Resume = () => {
@@ -115,7 +120,7 @@ const Resume = () => {
           <Typography variant="h4" align="center" className={classes.heading}>
             Work Experience
           </Typography>
-          <Box component="div" className={classes.timeLine}>
+                <Box  component="div" className={classes.timeLine}>
               <Typography 
               variant="h2" 
               className={`${classes.timeLineYear} ${classes.timeLineItem}`}
@@ -135,7 +140,7 @@ const Resume = () => {
                 </Typography>
                 <Typography variant="subtitle1" 
                 aligh="center"
-                style={{color: "tan"}}>
+                style={{color: "black"}}>
                 This is the subtitle area...........
                 </Typography>
             </Box>
@@ -158,7 +163,7 @@ const Resume = () => {
                 </Typography>
                         <Typography variant="subtitle1"
                             aligh="center"
-                            style={{ color: "tan" }}>
+                            style={{ color: "black" }}>
                             This is the subtitle area...........
                 </Typography>
                     </Box>
@@ -181,7 +186,7 @@ const Resume = () => {
                 </Typography>
                         <Typography variant="subtitle1"
                             aligh="center"
-                            style={{ color: "tan" }}>
+                            style={{ color: "black" }}>
                             Road To Full Stack
                 </Typography>
                     </Box>
@@ -204,7 +209,7 @@ const Resume = () => {
                 </Typography>
                         <Typography variant="subtitle1"
                             aligh="center"
-                            style={{ color: "tan" }}>
+                            style={{ color: "black" }}>
                             The Future
                 </Typography>
                     </Box>
