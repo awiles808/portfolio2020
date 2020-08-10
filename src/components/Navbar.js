@@ -1,7 +1,8 @@
 import React, {useState} from 'react';
 import {Link} from "react-router-dom";
 import { makeStyles } from '@material-ui/core/styles';
-import MobileRightMenuSlider from "@material-ui/core/Drawer"
+import MobileRightMenuSlider from "@material-ui/core/Drawer";
+import Footer from "./Footer";
 
 import {
     AppBar,
@@ -95,7 +96,7 @@ const Navbar = () => {
                             {lsItem.listIcon}
                         </ListItemIcon>
                         <ListItemText
-                            clasName={classes.listItem}
+                            className={classes.listItem}
                             primary={lsItem.listText} />
                     </ListItem>
                 ))}
@@ -121,10 +122,9 @@ const Navbar = () => {
                     open={state.right}
                     onClose={toggleSlider("right", false)}
                     >
-
-                    
                         
                         {sideList("right")}
+                        <Footer/>
                     </MobileRightMenuSlider>
                 </AppBar>
             </Box>
