@@ -22,11 +22,12 @@ import project4 from "./images/pong.png"
 
 const useStyles = makeStyles({
     mainContainer: {
-        background: "#96CDD4", 
+        background: "#A5B2BA", 
         height: "100%"
     },
     cardContainer: {
         maxWidth: 400,
+        background: "white",
     
         margin: "5rem auto"
     },

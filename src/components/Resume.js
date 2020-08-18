@@ -5,7 +5,7 @@ import Navbar from "./Navbar";
 
 const useStyles = makeStyles (theme=>({
     mainContainer: {
-        background: "#96CDD4",
+        background: "white",
         borderRadius: 16
     },
     timeLine: {
@@ -99,7 +99,7 @@ const useStyles = makeStyles (theme=>({
         heading: {
             color: "black",
         
-            padding: "3rem 0", 
+            padding: "0.5rem 0", 
             textTransform: "uppercase"
         },
         subHeading: {

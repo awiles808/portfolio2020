@@ -4,7 +4,11 @@ import { BottomNavigation, BottomNavigationAction } from "@material-ui/core";
 import Facebook from '@material-ui/icons/Facebook';
 import Instagram from '@material-ui/icons/Instagram';
 
+
+
 const useStyles = makeStyles({
+    
+
     root: {
         "& .MuiBottomNavigationAction-root": {
             minWidth: 0,
@@ -22,19 +26,34 @@ const useStyles = makeStyles({
 });
 
 const Footer = () => {
+
     const classes = useStyles();
+    
     return (
+      
         
         <BottomNavigation width="auto" style={{background:"#222"}}>
-        <BottomNavigationAction
+           
+           
+        <BottomNavigationAction  
+        
+        
         className={classes.root}
             style={{padding:0}}
             icon={<Facebook/>}
+                onClick={() => window.open("https://www.facebook.com/auburn.wiles.1")}
+           
+         
+            
+           
         />
+        
+               
         <BottomNavigationAction 
         className={classes.root}
         style={{padding:0}}
         icon={<Instagram/>}
+                onClick={() => window.open('https://www.instagram.com/awiles808/') }
         />
         </BottomNavigation>
 

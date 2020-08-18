@@ -1,7 +1,7 @@
 import React, {useState} from 'react';
 import {Link} from "react-router-dom";
 import { makeStyles } from '@material-ui/core/styles';
-import MobileRightMenuSlider from "@material-ui/core/Drawer";
+import MobileLeftMenuSlider from "@material-ui/core/Drawer";
 import Footer from "./Footer";
 
 import {
@@ -16,13 +16,16 @@ import {
     List,
     Typography,
     Box,
+    
+    
 } from "@material-ui/core";
 import {
-    ArrowBack,
     AssignmentInd,
     Home,
     Apps,
-    ContactMail
+    ContactMail, 
+    Menu
+    
 } from "@material-ui/icons";
 import avatar from "../logo.png";
 
@@ -40,14 +43,20 @@ const useStyles = makeStyles(theme => ({
     },
     listItem: {
         color: '#222'
+        
+    },
+    typographyStyles: {
+        flex: 1
     }
+    
+
     
 }));
 
 const menuItems = [
     {
-        listIcon: <Home />,
-        listText: "Home",
+        listIcon: <Menu />,
+        listText: "Menu",
         listPath: "/"
     },
     {
@@ -70,7 +79,7 @@ const menuItems = [
 
 const Navbar = () => {
     const [state, setState] = useState({
-        right: false 
+        left: false 
     });
 
     const toggleSlider = (slider, open) => () => {
@@ -108,25 +117,35 @@ const Navbar = () => {
         <>
         
             <Box component="nav">
+           
                 <AppBar position="static" style={{ background: "#222" }}>
-                    <Toolbar>
-                        <IconButton onClick={toggleSlider("right", true)}>
-                            <ArrowBack style={{ color: "#96CDD4" }} />
+                     <Toolbar>
+                        <IconButton onClick={toggleSlider("left", true)}>
+                            <Menu style={{ color: "#96CDD4" }} />
                         </IconButton>
+                        <Typography className={classes.typographyStyles} variant="h5" style={{ color: "#FFFFFF" }}>
+                            Menu
+                        </Typography>
+
+                        <Link to="/">
+                        <IconButton >
+                            <Home style={{ color: "#96CDD4" }} />
+                        </IconButton>
+                        </Link>
                         <Typography variant="h5" style={{ color: "#FFFFFF" }}>
-                            Portfolio
+                            Home
                         </Typography>
                     </Toolbar>
-                    <MobileRightMenuSlider
-                    anchor="right" 
-                    open={state.right}
-                    onClose={toggleSlider("right", false)}
+                    <MobileLeftMenuSlider
+                    anchor="left" 
+                    open={state.left}
+                    onClose={toggleSlider("left", false)}
                     >
-                        
-                        {sideList("right")}
+                        {sideList("left")}
                         <Footer/>
-                    </MobileRightMenuSlider>
+                    </MobileLeftMenuSlider>
                 </AppBar>
+              
             </Box>
         </>
 
