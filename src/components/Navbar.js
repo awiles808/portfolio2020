@@ -46,7 +46,9 @@ const useStyles = makeStyles(theme => ({
         
     },
     typographyStyles: {
-        flex: 1
+        flex: 1,
+        
+        
     }
     
 
@@ -123,19 +125,49 @@ const Navbar = () => {
                         <IconButton onClick={toggleSlider("left", true)}>
                             <Menu style={{ color: "#96CDD4" }} />
                         </IconButton>
-                        <Typography className={classes.typographyStyles} variant="h5" style={{ color: "#FFFFFF" }}>
+                        <Typography onClick={toggleSlider("left", true)} className={classes.typographyStyles} variant="h5" style={{ color: "#FFFFFF", cursor:'pointer' }}>
+                            
                             Menu
+                            
                         </Typography>
 
-                        <Link to="/">
+                        <Link to="/resume">
                         <IconButton >
                             <Home style={{ color: "#96CDD4" }} />
                         </IconButton>
                         </Link>
-                        <Typography variant="h5" style={{ color: "#FFFFFF" }}>
+                        <Typography className={classes.typographyStyles} variant="h5" style={{ color: "#FFFFFF" }}>
+                            Resume
+                        </Typography>
+
+                        <Link to="/">
+                            <IconButton >
+                                <Home style={{ color: "#96CDD4" }} />
+                            </IconButton>
+                        </Link>
+                        <Typography className={classes.typographyStyles} variant="h5" style={{ color: "#FFFFFF" }}>
+                            Home
+                        </Typography>
+
+                        <Link to="/">
+                            <IconButton >
+                                <Home style={{ color: "#96CDD4" }} />
+                            </IconButton>
+                        </Link>
+                        <Typography className={classes.typographyStyles} variant="h5" style={{ color: "#FFFFFF" }}>
+                            Home
+                        </Typography>
+
+                        <Link to="/">
+                            <IconButton >
+                                <Home style={{ color: "#96CDD4" }} />
+                            </IconButton>
+                        </Link>
+                        <Typography className={classes.typographyStyles} variant="h5" style={{ color: "#FFFFFF" }}>
                             Home
                         </Typography>
                     </Toolbar>
+                    
                     <MobileLeftMenuSlider
                     anchor="left" 
                     open={state.left}
