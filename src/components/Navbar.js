@@ -21,7 +21,7 @@ import {
 } from "@material-ui/core";
 import {
     AssignmentInd,
-    Home,
+    // Home,
     Apps,
     ContactMail, 
     Menu
@@ -123,8 +123,9 @@ const Navbar = () => {
            
                 <AppBar position="static" style={{ background: "#222" }}>
                      <Toolbar>
+                     {/* <Avatar className={classes.avatar} src={avatar} alt='Logo'/> */}
                      {/* Menu */}
-                        <IconButton onClick={toggleSlider("left", true)}>
+                        <IconButton  onClick={toggleSlider("left", true)}>
                             <Menu style={{ color: "#96CDD4" }} />
                         </IconButton>
                         <Typography onClick={toggleSlider("left", true)} className={classes.typographyStyles}  variant="h5" style={{ color: "#FFFFFF", cursor:'pointer' }}>
@@ -134,40 +135,48 @@ const Navbar = () => {
                     {/* Experience */}
                         <Link to="/resume">
                         <IconButton >
-                            <Apps style={{ color: "#96CDD4" }} />
+                            <AssignmentInd style={{ color: "#96CDD4" }} />
                         </IconButton>
                         </Link>
-                        <Typography  variant="h5" style={{ color: "#FFFFFF", cursor:'pointer' }}>
-                            <Link to='/resume' style={{ color: "inherit", cursor: 'pointer', textDecoration: 'none' }}> Experience  </Link>
+                        <Typography variant="h5" style={{ color: "#FFFFFF", cursor:'pointer' }}>
+                            <Link to='/resume' style={{ color: "inherit", cursor: 'pointer', textDecoration: 'none' }}> 
+                            Experience  
+                            </Link>
                         </Typography>
 
                         {/* Portfolio */}
-                        <Link to="/">
+                        <Link to="/portfolio">
                             <IconButton >
-                                <Home style={{ color: "#96CDD4" }} />
+                                <Apps style={{ color: "#96CDD4" }} />
                             </IconButton>
                         </Link>
                         <Typography  variant="h5" style={{ color: "#FFFFFF" }}>
-                            Home
+                        <Link to="/portfolio" style={{color:'inherit', cursor:'pointer', textDecoration:'none'}}>
+                            Portfolio
+                            </Link>
                         </Typography>
 
-                        <Link to="/">
+
+                        {/* Contacts */}
+                        <Link to="/contacts">
                             <IconButton >
-                                <Home style={{ color: "#96CDD4" }} />
+                                <ContactMail style={{ color: "#96CDD4" }} />
                             </IconButton>
                         </Link>
                         <Typography  variant="h5" style={{ color: "#FFFFFF" }}>
-                            Home
+                            <Link to="/contacts" style={{color:'inherit', cursor:'pointer', textDecoration:'none'}}>
+                            Contact 
+                            </Link>
                         </Typography>
 
-                        <Link to="/">
+                        {/* <Link to="/">
                             <IconButton >
                                 <Home style={{ color: "#96CDD4" }} />
                             </IconButton>
                         </Link>
                         <Typography variant="h5" style={{ color: "#FFFFFF" }}>
                             Home
-                        </Typography>
+                        </Typography> */}
                     </Toolbar>
                     
                     <MobileLeftMenuSlider
