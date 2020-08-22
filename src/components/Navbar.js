@@ -46,11 +46,11 @@ const useStyles = makeStyles(theme => ({
         
     },
     typographyStyles: {
-        flex: 1,
-        
+        flex: 1, 
         
     }
     
+
 
     
 }));
@@ -98,7 +98,8 @@ const Navbar = () => {
         onClick={toggleSlider(slider, false)}
         
         >
-            <Avatar className={classes.avatar} src={avatar} alt="Auburn" />
+        <Link to="/">
+            <Avatar className={classes.avatar} src={avatar} alt="Auburn" /></Link>
             <Divider />
             <List>
                 {menuItems.map((lsItem, key) => (
@@ -122,30 +123,31 @@ const Navbar = () => {
            
                 <AppBar position="static" style={{ background: "#222" }}>
                      <Toolbar>
+                     {/* Menu */}
                         <IconButton onClick={toggleSlider("left", true)}>
                             <Menu style={{ color: "#96CDD4" }} />
                         </IconButton>
-                        <Typography onClick={toggleSlider("left", true)} className={classes.typographyStyles} variant="h5" style={{ color: "#FFFFFF", cursor:'pointer' }}>
-                            
+                        <Typography onClick={toggleSlider("left", true)} className={classes.typographyStyles}  variant="h5" style={{ color: "#FFFFFF", cursor:'pointer' }}>
                             Menu
-                            
                         </Typography>
 
+                    {/* Experience */}
                         <Link to="/resume">
                         <IconButton >
-                            <Home style={{ color: "#96CDD4" }} />
+                            <Apps style={{ color: "#96CDD4" }} />
                         </IconButton>
                         </Link>
-                        <Typography className={classes.typographyStyles} variant="h5" style={{ color: "#FFFFFF" }}>
-                            Resume
+                        <Typography  variant="h5" style={{ color: "#FFFFFF", cursor:'pointer' }}>
+                            <Link to='/resume' style={{ color: "inherit", cursor: 'pointer', textDecoration: 'none' }}> Experience  </Link>
                         </Typography>
 
+                        {/* Portfolio */}
                         <Link to="/">
                             <IconButton >
                                 <Home style={{ color: "#96CDD4" }} />
                             </IconButton>
                         </Link>
-                        <Typography className={classes.typographyStyles} variant="h5" style={{ color: "#FFFFFF" }}>
+                        <Typography  variant="h5" style={{ color: "#FFFFFF" }}>
                             Home
                         </Typography>
 
@@ -154,7 +156,7 @@ const Navbar = () => {
                                 <Home style={{ color: "#96CDD4" }} />
                             </IconButton>
                         </Link>
-                        <Typography className={classes.typographyStyles} variant="h5" style={{ color: "#FFFFFF" }}>
+                        <Typography  variant="h5" style={{ color: "#FFFFFF" }}>
                             Home
                         </Typography>
 
@@ -163,7 +165,7 @@ const Navbar = () => {
                                 <Home style={{ color: "#96CDD4" }} />
                             </IconButton>
                         </Link>
-                        <Typography className={classes.typographyStyles} variant="h5" style={{ color: "#FFFFFF" }}>
+                        <Typography variant="h5" style={{ color: "#FFFFFF" }}>
                             Home
                         </Typography>
                     </Toolbar>
