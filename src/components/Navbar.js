@@ -48,6 +48,9 @@ const useStyles = makeStyles(theme => ({
     typographyStyles: {
         flex: 1, 
         
+    },
+    appBarBreak: {
+
     }
     
 
@@ -118,6 +121,7 @@ const Navbar = () => {
     )
     return (
         <>
+        
         
             <Box component="nav">
            
